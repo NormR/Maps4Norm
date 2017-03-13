@@ -1,0 +1,29 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+      
+     <CheckBoxPreference
+         android:defaultValue="true"
+         android:key="set_mylocation"
+         android:title="Use My Location"
+         android:summary="Set My Location" />
+     
+     <CheckBoxPreference 
+     	android:defaultValue="false"
+     	android:key="showFeetIfShort"
+     	android:title="Show feet if short"
+     	android:summary="Show feet"   />
+
+     <CheckBoxPreference 
+     	android:defaultValue="false"
+     	android:key="useCustomMarker"
+     	android:title="Use custom marker"
+     	android:summary="Use custom marker with size set here"   />
+     
+     <ListPreference
+        android:key="customMarkerSize"
+        android:entries="@array/markerSizes"
+        android:title="Size of placemarker" 
+        android:entryValues="@array/markerSizes"
+        android:summary="Set the size of the Placemarker dot" />
+     
+     
+ </PreferenceScreen>

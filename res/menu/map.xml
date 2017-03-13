@@ -1,0 +1,222 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+      <item android:id="@+id/map_type"
+         android:title="Set Map Type" 
+         android:showAsAction="ifRoom" 
+         android:layout_gravity="left">
+         
+          <!--  Map mode sub menu -->
+         <menu>
+          <group android:checkableBehavior="single">
+            <item android:id="@+id/normal"
+         		  android:enabled="true"
+                  android:title="Normal" />
+            
+            <item android:id="@+id/satellite"
+         		  android:enabled="true"
+                  android:title="Satellite" />
+            
+            <item android:id="@+id/terrain"
+        		  android:enabled="true"
+                  android:title="Terrain" />
+            </group>
+        </menu>
+    </item>
+    
+     <item android:id="@+id/read_file"
+         android:title="Read file ..." 
+         android:showAsAction="ifRoom" 
+         android:layout_gravity="left">
+         
+	       <!-- "file" submenu -->
+	     <menu>
+	         <item android:id="@+id/read_wp_and_route"
+	          		android:title="Read file as waypoints and route" 
+	          		android:layout_gravity="left" />
+	            
+		    <item android:id="@+id/read_waypoints"
+		          android:title="Read file as waypoints" 
+		          android:layout_gravity="left" />
+		    
+		    <item android:id="@+id/read_a_route"
+		          android:title="Read file as route" 
+		          android:layout_gravity="left" />
+		    
+	    </menu>
+	</item>
+    
+    <item
+        android:id="@+id/clear_menu"
+        android:title="Clear ...">
+        <menu>
+            <item android:id="@+id/clear_wps"
+                android:title="Clear waypoint Markers" />
+            <item android:id="@+id/clear_routes"
+                android:title="Clear routes" />
+            <item android:id="@+id/clear_all"
+                android:title="Clear all" />
+            <item android:id="@+id/hide_c_d"
+                android:title="Hide C and D markers" />
+            <item android:id="@+id/reset_marker_titles"
+                android:title="Reset marker titles" />
+            
+        </menu>
+    </item>
+    
+    <item android:id="@+id/twotouch" 
+        android:title="Two touches for C and D" 
+        android:checkable="true"
+        android:visible="true" 
+        android:enabled="true" />
+ 
+    <item android:id="@+id/measurespeed"
+        android:title="Measure speed between 2 points"
+        android:checkable="true"
+        android:visible="true"
+        android:enabled="true" />
+    
+    <item android:id="@+id/gotowaypoint"
+        android:title="Go to waypoint ..." />
+    
+    <item android:id="@+id/set_uwp_filename"
+        android:title="Set user waypoint filename" />
+    
+    <item android:id="@+id/writeuserwps"
+        android:title="Write user waypoints to file"
+        android:showAsAction="never" />
+    
+    <item
+        android:id="@+id/set_start_loc"
+        android:title="Set Start location..." >
+    	
+    	<menu>
+    	  <group >
+     	    <item
+    	        android:id="@+id/place_wp"
+        		android:enabled="true"
+    	        android:title="Press Placemarker" />
+    	    <item
+        		android:enabled="true"
+    	        android:id="@+id/create_wp"
+    	        android:title="Create Placemarker with long press" />
+    	    
+    	   </group> 
+    	</menu>
+    </item>	
+        
+    <item
+        android:id="@+id/action_settings"
+        android:showAsAction="never"
+        android:title="@string/action_settings" />
+    
+    <item 
+        android:id="@+id/hideableViewMenu" 
+        android:title="Measure distance..." >
+    	
+    	<menu>  
+	        <item
+	            android:id="@+id/measureDistance"
+	            android:title="Measure distance"
+		        android:checked="false" 
+		        android:checkable="true"
+		        android:visible="true" 
+		        android:enabled="true" />
+	        <item
+	            android:id="@+id/saveMarks"
+	            android:title="Save marks" />
+	        <item
+	            android:id="@+id/loadMarks"
+	            android:title="Load saved marks" />
+		</menu>
+    </item>   
+    
+    <item
+        android:id="@+id/hideableViewMenu1"
+        android:title="Update route ..." >
+    	
+        <menu>
+            <group 
+                android:checkableBehavior="single">
+	            <item 
+	                android:id="@+id/addMarker"
+	                android:title="Add Marker"
+	                android:checked="false" 
+			        android:checkable="true"
+			        android:visible="true" 
+			        android:enabled="true" />
+		        <item
+		            android:id="@+id/moveMarker"
+	                android:checked="false" 
+			        android:checkable="true"
+			        android:visible="true" 
+		            android:title="Move marker" />
+		        <item
+		            android:id="@+id/deleteMarker"
+	                android:checked="false" 
+			        android:checkable="true"
+			        android:visible="true" 
+		            android:title="Delete marker" />
+		        <item
+		            android:id="@+id/renameMarker"
+	                android:checked="false" 
+			        android:checkable="true"
+			        android:visible="true" 
+		            android:title="Rename marker" />
+		        <item
+		            android:id="@+id/noUpdates"
+	                android:checked="false" 
+			        android:checkable="true"
+			        android:visible="true" 
+		            android:title="No Updates" />
+	        </group>
+	        
+		    <item
+	            android:id="@+id/undoUpdate"
+	            android:title="Undo update" />
+	        
+	        
+	        <item
+	            android:id="@+id/writeRoute"
+	            android:title="Write updated Route" />
+	        
+        </menu>
+            
+      
+    </item>
+
+    
+    <item
+        android:id="@+id/createWPAtMyLoc"
+        android:title="Create WP @ MyLocation (GPS)"
+        android:checked="false" 
+        android:checkable="true"
+        android:visible="true" 
+        android:enabled="true" />
+    
+    <item android:id="@+id/searchForLocation"
+        android:title="Search for location ..." />
+    
+        
+    <item android:id="@+id/savestdout" 
+        android:title="Save STD output" 
+        android:checkable="true"
+        android:visible="true" 
+        android:enabled="true" />
+    
+    <item android:id="@+id/queryStatus"
+          android:showAsAction="never"
+          android:title="Show status">
+    </item>
+    
+    <item android:id="@+id/about" 
+          android:showAsAction="never"
+          android:title="About">
+    </item>
+    
+    <item android:id="@+id/exit" 
+          android:showAsAction="never"
+          android:title="Exit">
+    </item>
+    
+
+</menu>
